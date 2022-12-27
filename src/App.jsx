@@ -5,8 +5,8 @@ import Pokebox from './components/Pokebox';
 
 
 function App() {
-    const [pokeCard, setPokeCard] = useState([1,2,3,4,5]);
-    const List = pokeCard.map((value) => <Pokebox id={value} key={value}> </Pokebox>)
+    const [pokeCard, setPokeCard] = useState(Array(5).fill(1));
+    const List = pokeCard.map((value,index) => <Pokebox id={index+1} key={index+1}> </Pokebox>)
     return (
     <main className="App"> 
     {List}
